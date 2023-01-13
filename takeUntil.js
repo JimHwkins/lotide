@@ -19,14 +19,12 @@ const assertArraysEqual = (actual, expected) => {
 //
 
 const takeUntil = (array, callback) => {
-  let output = [];
   for (let i of array) {
-    if (!callback(i)) {
-      output.push(i);
-    } else {
-      return output;
+    if (callback(i)) {
+      array = array.slice(0, array.indexOf(i));
     }
   }
+  return array;
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
