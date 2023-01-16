@@ -21,14 +21,14 @@ const assertArraysEqual = (actual, expected) => {
 const takeUntil = (array, callback) => {
   for (let i of array) {
     if (callback(i)) {
-      array = array.slice(0, array.indexOf(i));
+      return array.slice(0, array.indexOf(i));
     }
   }
-  return array;
 };
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, (x) => x < 0);
+console.log(results1);
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 
 console.log("---");
