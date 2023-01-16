@@ -5,7 +5,3 @@ const tail = (arr) => {
 };
 
 module.exports = tail;
-
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
