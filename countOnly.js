@@ -1,12 +1,3 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = (actual, expected) => {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const countOnly = (allItems, itemsToCount) => {
   let results = {};
   for (let i of allItems) {
@@ -20,3 +11,4 @@ const countOnly = (allItems, itemsToCount) => {
   }
   return results;
 };
+module.exports = countOnly;
